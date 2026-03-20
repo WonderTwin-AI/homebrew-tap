@@ -5,23 +5,23 @@
 class Wt < Formula
   desc "CLI for WonderTwin — behavioral twins for third-party APIs"
   homepage "https://wondertwin.dev"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.1.0/wondertwin_0.1.0_darwin_amd64.tar.gz"
-      sha256 "9b1e93c3f6cdfa4bd4379bd9628994f99d68ccd0275bfa5da1f2642a65c9d659"
+      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_darwin_amd64.tar.gz"
+      sha256 "eb9063cd0039f7b18f86ad57a0a6e8b5b2af4a53a176209cf0b8b7e138e961f4"
 
-      def install
+      define_method(:install) do
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.1.0/wondertwin_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f320fd6af8abae44c690616678bb22bbd8ce6eb15b09ce050df1868bab1daa04"
+      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_darwin_arm64.tar.gz"
+      sha256 "00e4186fafae30fed6ab4c9ea560e3bb630c3b6a1d028922aba2da84914eaa72"
 
-      def install
+      define_method(:install) do
         bin.install "wt"
       end
     end
@@ -29,16 +29,16 @@ class Wt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.1.0/wondertwin_0.1.0_linux_amd64.tar.gz"
-      sha256 "70fcc24155a23171157c8ffb274bac55c353e72533197bc1d387283d9b44c81a"
-      def install
+      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_linux_amd64.tar.gz"
+      sha256 "8b3da3c2ed2945d234ad9e649fb36ba185016cbd16839d541211e4d7ab28ab3d"
+      define_method(:install) do
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.1.0/wondertwin_0.1.0_linux_arm64.tar.gz"
-      sha256 "9b0304b91d1d0a01b4004b99765d5a059a5656d3d171e8e2c7130b1f6b56b555"
-      def install
+      url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_linux_arm64.tar.gz"
+      sha256 "acd647492d5101ae98453c48510e4ed4dd19d334cfc08fdaf7c82e3709a9ddf8"
+      define_method(:install) do
         bin.install "wt"
       end
     end
