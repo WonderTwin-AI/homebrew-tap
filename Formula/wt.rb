@@ -11,17 +11,17 @@ class Wt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_darwin_amd64.tar.gz"
-      sha256 "eb9063cd0039f7b18f86ad57a0a6e8b5b2af4a53a176209cf0b8b7e138e961f4"
+      sha256 "5374466898524386d17fb135a00fa42f0d891cd90b2bc216e53bd5978f19447e"
 
-      define_method(:install) do
+      def install
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_darwin_arm64.tar.gz"
-      sha256 "00e4186fafae30fed6ab4c9ea560e3bb630c3b6a1d028922aba2da84914eaa72"
+      sha256 "dc7a397c0ea8b31c21919f8741ff2243cc4ec57d93630b9531f6bbb768330415"
 
-      define_method(:install) do
+      def install
         bin.install "wt"
       end
     end
@@ -30,15 +30,15 @@ class Wt < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_linux_amd64.tar.gz"
-      sha256 "8b3da3c2ed2945d234ad9e649fb36ba185016cbd16839d541211e4d7ab28ab3d"
-      define_method(:install) do
+      sha256 "056d83a38035de9d74fe3cc8791957c97d3dc407604c051c3f8ea7f390e50be2"
+      def install
         bin.install "wt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/WonderTwin-AI/wondertwin/releases/download/v0.2.0/wondertwin_0.2.0_linux_arm64.tar.gz"
-      sha256 "acd647492d5101ae98453c48510e4ed4dd19d334cfc08fdaf7c82e3709a9ddf8"
-      define_method(:install) do
+      sha256 "04fc965cbc619d6ba3df5b4eca5c2775baf59808dc795f5ef232f53ba2568fbf"
+      def install
         bin.install "wt"
       end
     end
